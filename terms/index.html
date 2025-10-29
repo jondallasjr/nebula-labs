@@ -1,0 +1,763 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Terms of Service - Nebula Labs</title><style>/* Global CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #0f172a;
+  background: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER STYLES */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-decoration: none;
+  background: linear-gradient(135deg, #0f172a 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #0f172a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* NAVIGATION STYLES */
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.nav-cta {
+  background: #6366f1 !important;
+  color: white !important;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: #4f46e5 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  text-decoration: none;
+}
+
+/* FOOTER STYLES */
+.site-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 4rem 2rem 2rem;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .site-nav.active {
+    max-height: 500px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+/* Terms of Service - Nebula Labs - Page CSS */
+.terms-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.terms-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.terms-header h1 {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.last-updated {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.terms-content {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 3rem;
+}
+
+.terms-toc {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.terms-toc h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.terms-toc ul {
+  list-style: none;
+}
+
+.terms-toc li {
+  margin-bottom: 0.75rem;
+}
+
+.terms-toc a {
+  color: #6366f1;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.terms-toc a:hover {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.terms-article {
+  color: #334155;
+  line-height: 1.8;
+}
+
+.terms-article section {
+  margin-bottom: 2.5rem;
+}
+
+.terms-article h2 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.terms-article p {
+  margin-bottom: 1rem;
+}
+
+.terms-article ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.terms-article li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #6366f1;
+  margin-top: 1rem;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.contact-info a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 968px) {
+  .terms-content {
+    grid-template-columns: 1fr;
+  }
+
+  .terms-toc {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .terms-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .terms-container {
+    padding: 2rem 1rem;
+  }
+
+  .terms-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .terms-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .terms-toc {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .terms-toc h2 {
+    font-size: 0.9rem;
+  }
+
+  .terms-toc a {
+    font-size: 0.85rem;
+  }
+
+  .terms-article h2 {
+    font-size: 1.25rem;
+  }
+
+  .contact-info {
+    padding: 1rem;
+  }
+}.terms-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.terms-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.terms-header h1 {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.last-updated {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.terms-content {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 3rem;
+}
+
+.terms-toc {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.terms-toc h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.terms-toc ul {
+  list-style: none;
+}
+
+.terms-toc li {
+  margin-bottom: 0.75rem;
+}
+
+.terms-toc a {
+  color: #6366f1;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.terms-toc a:hover {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.terms-article {
+  color: #334155;
+  line-height: 1.8;
+}
+
+.terms-article section {
+  margin-bottom: 2.5rem;
+}
+
+.terms-article h2 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.terms-article p {
+  margin-bottom: 1rem;
+}
+
+.terms-article ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.terms-article li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #6366f1;
+  margin-top: 1rem;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.contact-info a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 968px) {
+  .terms-content {
+    grid-template-columns: 1fr;
+  }
+
+  .terms-toc {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .terms-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .terms-container {
+    padding: 2rem 1rem;
+  }
+
+  .terms-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .terms-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .terms-toc {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .terms-toc h2 {
+    font-size: 0.9rem;
+  }
+
+  .terms-toc a {
+    font-size: 0.85rem;
+  }
+
+  .terms-article h2 {
+    font-size: 1.25rem;
+  }
+
+  .contact-info {
+    padding: 1rem;
+  }
+}</style></head><body><header class="site-header">
+  <div class="header-container">
+    <a href="/nebula-labs/" class="logo">Nebula Labs</a>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header><nav class="site-nav">
+  <ul class="nav-menu">
+    <li><a href="/nebula-labs/solutions">Solutions</a></li>
+    <li><a href="/nebula-labs/platform">Platform</a></li>
+    <li><a href="/nebula-labs/pricing">Pricing</a></li>
+    <li><a href="/nebula-labs/resources">Resources</a></li>
+    <li><a href="/nebula-labs/about">About</a></li>
+    <li><a href="/nebula-labs/contact">Contact</a></li>
+    <li><a href="/nebula-labs/get-started" class="nav-cta">Get Started</a></li>
+  </ul>
+</nav>
+<script>
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  toggle?.addEventListener('click', () => {
+    nav?.classList.toggle('active');
+    toggle.classList.toggle('active');
+  });
+</script><main class="terms-container">
+  <div class="terms-header">
+    <h1>Terms of Service</h1>
+    <p class="last-updated">Last updated: October 29, 2025</p>
+  </div>
+
+  <div class="terms-content">
+    <nav class="terms-toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#agreement">1. Agreement to Terms</a></li>
+        <li><a href="#use-license">2. Use License</a></li>
+        <li><a href="#restrictions">3. Use Restrictions</a></li>
+        <li><a href="#intellectual-property">4. Intellectual Property Rights</a></li>
+        <li><a href="#user-content">5. User Content</a></li>
+        <li><a href="#service-description">6. Service Description</a></li>
+        <li><a href="#limitation-liability">7. Limitation of Liability</a></li>
+        <li><a href="#indemnification">8. Indemnification</a></li>
+        <li><a href="#termination">9. Termination</a></li>
+        <li><a href="#modifications">10. Modifications to Terms</a></li>
+        <li><a href="#governing-law">11. Governing Law</a></li>
+        <li><a href="#contact">12. Contact Information</a></li>
+      </ul>
+    </nav>
+
+    <article class="terms-article">
+      <section id="agreement">
+        <h2>1. Agreement to Terms</h2>
+        <p>By accessing and using the Nebula Labs platform ("Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+      </section>
+
+      <section id="use-license">
+        <h2>2. Use License</h2>
+        <p>Nebula Labs grants you a limited, non-exclusive, non-transferable, revocable license to use the Service in accordance with these terms. This license does not include the right to:</p>
+        <ul>
+          <li>Modify or copy the Service or any portion thereof</li>
+          <li>Rent, lease, loan, sell, or otherwise transfer the Service or any portion thereof</li>
+          <li>Reverse engineer or attempt to extract the source code of the Service</li>
+          <li>Create derivative works based on the Service</li>
+          <li>Remove or alter any proprietary notices or labels on the Service</li>
+          <li>Use the Service for any commercial purpose not expressly permitted in writing by Nebula Labs</li>
+        </ul>
+      </section>
+
+      <section id="restrictions">
+        <h2>3. Use Restrictions</h2>
+        <p>You agree not to access or use the Service for any purpose other than that for which Nebula Labs makes the Service available. The Service may not be used in connection with any commercial endeavors except those specifically endorsed or approved by Nebula Labs.</p>
+        <p>Prohibited behavior includes:</p>
+        <ul>
+          <li>Harassing or causing distress or inconvenience to any person</li>
+          <li>Obscene or abusive language or content</li>
+          <li>Disrupting the normal flow of dialogue within the Service</li>
+          <li>Attempting to gain unauthorized access to the Service or its systems</li>
+          <li>Transmitting viruses or other malicious code</li>
+          <li>Collecting or tracking personal information of others</li>
+          <li>Spamming, phishing, or other fraudulent activity</li>
+        </ul>
+      </section>
+
+      <section id="intellectual-property">
+        <h2>4. Intellectual Property Rights</h2>
+        <p>The Service and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio) are owned by Nebula Labs, its licensors, or other providers of such material and are protected by United States and international copyright, trademark, and other intellectual property laws.</p>
+        <p>You acknowledge that you do not acquire any ownership rights by downloading copyrighted material from the Service.</p>
+      </section>
+
+      <section id="user-content">
+        <h2>5. User Content</h2>
+        <p>When you submit, post, or display content on or through the Service, you grant Nebula Labs a worldwide, non-exclusive, royalty-free license to use, copy, reproduce, process, adapt, modify, publish, transmit, display, and distribute such content in any media or medium and for any purposes.</p>
+        <p>You represent and warrant that:</p>
+        <ul>
+          <li>You own or have the necessary rights to all content you submit</li>
+          <li>Your content does not infringe any third-party intellectual property rights</li>
+          <li>Your content complies with all applicable laws and regulations</li>
+          <li>Your content does not contain malware or harmful code</li>
+        </ul>
+      </section>
+
+      <section id="service-description">
+        <h2>6. Service Description</h2>
+        <p>Nebula Labs provides machine learning and artificial intelligence services designed to assist businesses with data analysis and predictive modeling. While we strive to maintain accurate and up-to-date information, we make no warranties about the completeness, accuracy, or reliability of the Service.</p>
+        <p>The Service is provided "AS IS" and "AS AVAILABLE" without any representations or warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+      </section>
+
+      <section id="limitation-liability">
+        <h2>7. Limitation of Liability</h2>
+        <p>In no event shall Nebula Labs, its directors, employees, or agents be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use or inability to use the Service, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses.</p>
+        <p>To the fullest extent permitted by law, Nebula Labs' total liability to you in connection with these terms shall not exceed the amount paid by you to Nebula Labs in the twelve (12) months preceding the claim.</p>
+      </section>
+
+      <section id="indemnification">
+        <h2>8. Indemnification</h2>
+        <p>You agree to indemnify, defend, and hold harmless Nebula Labs and its officers, directors, employees, agents, and successors from any third-party claims, damages, costs, and expenses (including reasonable attorneys' fees) arising out of or related to:</p>
+        <ul>
+          <li>Your use of the Service</li>
+          <li>Your violation of these terms</li>
+          <li>Your content or information provided to the Service</li>
+          <li>Your violation of any applicable law or third-party rights</li>
+        </ul>
+      </section>
+
+      <section id="termination">
+        <h2>9. Termination</h2>
+        <p>Nebula Labs may terminate or suspend your account and access to the Service immediately, without prior notice or liability, for any reason whatsoever, including if you breach any terms of this agreement.</p>
+        <p>Upon termination, your right to use the Service will immediately cease. We may retain or delete your data in our sole discretion.</p>
+      </section>
+
+      <section id="modifications">
+        <h2>10. Modifications to Terms</h2>
+        <p>Nebula Labs may modify these terms at any time. Material changes will be notified to you via email or prominent notice on the Service. Your continued use of the Service following the posting of modified terms means you accept and agree to the changes.</p>
+      </section>
+
+      <section id="governing-law">
+        <h2>11. Governing Law</h2>
+        <p>These terms and conditions are governed by and construed in accordance with the laws of the State of California, United States, and you irrevocably submit to the exclusive jurisdiction of the courts in San Francisco County, California.</p>
+      </section>
+
+      <section id="contact">
+        <h2>12. Contact Information</h2>
+        <p>If you have any questions about these Terms of Service, please contact us at:</p>
+        <div class="contact-info">
+          <p><strong>Nebula Labs</strong><br>
+          Email: <a href="mailto:hello@nebulalabs.ai">hello@nebulalabs.ai</a><br>
+          Phone: <a href="tel:+14155550123">+1 (415) 555-0123</a><br>
+          Address: 2140 Market Street, Suite 400, San Francisco, CA 94114<br>
+          Business Hours: Monday-Friday, 9am-6pm PST</p>
+        </div>
+      </section>
+    </article>
+  </div>
+</main><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Nebula Labs</h4>
+      <p>Democratizing advanced machine learning for mid-market companies.</p>
+      <div class="social-links">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="/nebula-labs/platform">Platform</a></li>
+        <li><a href="/nebula-labs/pricing">Pricing</a></li>
+        <li><a href="/nebula-labs/solutions">Solutions</a></li>
+        <li><a href="https://docs.nebulalabs.ai">Documentation</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/nebula-labs/about">About</a></li>
+        <li><a href="/nebula-labs/resources">Resources</a></li>
+        <li><a href="/nebula-labs/contact">Contact</a></li>
+        <li><a href="https://discord.gg/nebula-labs">Developer Community</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/nebula-labs/privacy">Privacy Policy</a></li>
+        <li><a href="/nebula-labs/terms">Terms of Service</a></li>
+        <li><a href="/nebula-labs/security">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Nebula Labs. All rights reserved.</p>
+  </div>
+</footer></body></html>
