@@ -1,0 +1,777 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Case Studies - Nebula Labs</title><style>/* Global CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #0f172a;
+  background: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER STYLES */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-decoration: none;
+  background: linear-gradient(135deg, #0f172a 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #0f172a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* NAVIGATION STYLES */
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.nav-cta {
+  background: #6366f1 !important;
+  color: white !important;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: #4f46e5 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  text-decoration: none;
+}
+
+/* FOOTER STYLES */
+.site-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 4rem 2rem 2rem;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .site-nav.active {
+    max-height: 500px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+/* Resources - Nebula Labs - Page CSS */
+.resources-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #6366f1 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.resources-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.resources-hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+.resources-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+.resources-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.resource-category {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.category-header {
+  border-bottom: 2px solid #6366f1;
+  padding-bottom: 1.5rem;
+}
+
+.category-header h2 {
+  font-size: 1.75rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.category-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.resource-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.resource-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.resource-card:hover {
+  border-color: #6366f1;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.12);
+  transform: translateY(-4px);
+}
+
+.card-meta {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #4f46e5;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+}
+
+.resource-card h3 {
+  font-size: 1.15rem;
+  color: #0f172a;
+  line-height: 1.4;
+}
+
+.resource-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.card-link {
+  color: #6366f1;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  width: fit-content;
+}
+
+.card-link:hover {
+  color: #4f46e5;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.resources-cta {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 2rem;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.resources-cta h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.resources-cta p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #e0e7ff;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #6366f1;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .resources-hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .resources-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .resources-hero p {
+    font-size: 1rem;
+  }
+
+  .resources-container {
+    padding: 0 1rem 2rem;
+  }
+
+  .resources-grid {
+    gap: 2.5rem;
+  }
+
+  .category-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .resource-items {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-cta {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .resources-cta h2 {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* Case Studies - Nebula Labs - Page CSS */
+.case-study-card {
+  position: relative;
+  border-left: 4px solid #6366f1;
+}
+
+.case-study-metrics {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #6366f1;
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.insight-card {
+  border-left: 4px solid #a78bfa;
+}
+
+.insight-card .card-meta {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+@media (max-width: 768px) {
+  .case-study-metrics {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .metric {
+    flex: 1 1 45%;
+  }
+}.case-study-card {
+  position: relative;
+  border-left: 4px solid #6366f1;
+}
+
+.case-study-metrics {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #6366f1;
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.insight-card {
+  border-left: 4px solid #a78bfa;
+}
+
+.insight-card .card-meta {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+@media (max-width: 768px) {
+  .case-study-metrics {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .metric {
+    flex: 1 1 45%;
+  }
+}</style></head><body><header class="site-header">
+  <div class="header-container">
+    <a href="/nebula-labs/" class="logo">Nebula Labs</a>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header><nav class="site-nav">
+  <ul class="nav-menu">
+    <li><a href="/nebula-labs/solutions">Solutions</a></li>
+    <li><a href="/nebula-labs/platform">Platform</a></li>
+    <li><a href="/nebula-labs/pricing">Pricing</a></li>
+    <li><a href="/nebula-labs/resources">Resources</a></li>
+    <li><a href="/nebula-labs/about">About</a></li>
+    <li><a href="/nebula-labs/contact">Contact</a></li>
+    <li><a href="/nebula-labs/get-started" class="nav-cta">Get Started</a></li>
+  </ul>
+</nav>
+<script>
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  toggle?.addEventListener('click', () => {
+    nav?.classList.toggle('active');
+    toggle.classList.toggle('active');
+  });
+</script><section class="resources-hero">
+  <div class="hero-content">
+    <h1>Case Studies</h1>
+    <p>Real-world success stories from mid-market companies transforming their business with Nebula Labs</p>
+  </div>
+</section>
+
+<div class="resources-container">
+  <div class="resources-grid">
+    <div class="resource-category">
+      <div class="category-header">
+        <h2>Customer Success Stories</h2>
+        <p>Discover how leading companies achieved measurable ROI with Nebula Labs solutions</p>
+      </div>
+      <div class="resource-items">
+        <article class="resource-card case-study-card">
+          <span class="card-meta">Case Study</span>
+          <h3>Financial Services: 3.2x Revenue Lift</h3>
+          <div class="case-study-metrics">
+            <div class="metric">
+              <span class="metric-value">3.2x</span>
+              <span class="metric-label">Revenue Increase</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">6mo</span>
+              <span class="metric-label">Time to ROI</span>
+            </div>
+          </div>
+          <p>A mid-market financial services firm deployed Nebula Labs' predictive analytics to optimize customer segmentation and risk assessment. Results: 3.2x revenue lift, 40% reduction in customer acquisition cost, and 6-month ROI.</p>
+          <a href="#" class="card-link">Read Full Case Study →</a>
+        </article>
+
+        <article class="resource-card case-study-card">
+          <span class="card-meta">Case Study</span>
+          <h3>E-Commerce: 45% Conversion Rate Improvement</h3>
+          <div class="case-study-metrics">
+            <div class="metric">
+              <span class="metric-value">45%</span>
+              <span class="metric-label">Conversion Lift</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">$2.1M</span>
+              <span class="metric-label">Annual Savings</span>
+            </div>
+          </div>
+          <p>Leading e-commerce platform used Nebula's personalization engine to deliver AI-powered product recommendations. Achieved 45% conversion rate improvement, $2.1M in annual revenue gains, and 35% reduction in recommendation latency.</p>
+          <a href="#" class="card-link">Read Full Case Study →</a>
+        </article>
+
+        <article class="resource-card case-study-card">
+          <span class="card-meta">Case Study</span>
+          <h3>SaaS: 60% Churn Reduction</h3>
+          <div class="case-study-metrics">
+            <div class="metric">
+              <span class="metric-value">60%</span>
+              <span class="metric-label">Churn Reduced</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">92%</span>
+              <span class="metric-label">Retention Rate</span>
+            </div>
+          </div>
+          <p>B2B SaaS company deployed Nebula's predictive churn model to identify at-risk customers and enable proactive retention. Reduced churn by 60%, improved retention to 92%, and increased customer lifetime value by 3.4x.</p>
+          <a href="#" class="card-link">Read Full Case Study →</a>
+        </article>
+
+        <article class="resource-card case-study-card">
+          <span class="card-meta">Case Study</span>
+          <h3>Healthcare: 38% Operational Efficiency Gain</h3>
+          <div class="case-study-metrics">
+            <div class="metric">
+              <span class="metric-value">38%</span>
+              <span class="metric-label">Efficiency Gain</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">2 weeks</span>
+              <span class="metric-label">Implementation</span>
+            </div>
+          </div>
+          <p>Healthcare provider implemented Nebula's forecasting models for resource optimization and demand planning. Achieved 38% operational efficiency gains, reduced resource waste by 42%, and improved patient outcomes through better capacity planning.</p>
+          <a href="#" class="card-link">Read Full Case Study →</a>
+        </article>
+
+        <article class="resource-card case-study-card">
+          <span class="card-meta">Case Study</span>
+          <h3>Manufacturing: $4.7M Annual Cost Reduction</h3>
+          <div class="case-study-metrics">
+            <div class="metric">
+              <span class="metric-value">$4.7M</span>
+              <span class="metric-label">Cost Saved</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">18 months</span>
+              <span class="metric-label">Payback Period</span>
+            </div>
+          </div>
+          <p>Manufacturing firm deployed Nebula's predictive maintenance and quality forecasting models. Reduced unplanned downtime by 47%, improved defect detection by 89%, and achieved $4.7M in annual cost savings within 18 months.</p>
+          <a href="#" class="card-link">Read Full Case Study →</a>
+        </article>
+
+        <article class="resource-card case-study-card">
+          <span class="card-meta">Case Study</span>
+          <h3>Retail: 52% Inventory Optimization</h3>
+          <div class="case-study-metrics">
+            <div class="metric">
+              <span class="metric-value">52%</span>
+              <span class="metric-label">Inventory Optimized</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">33%</span>
+              <span class="metric-label">Carrying Cost Reduced</span>
+            </div>
+          </div>
+          <p>Multi-location retail chain implemented Nebula's demand forecasting and inventory optimization. Optimized inventory levels by 52%, reduced carrying costs by 33%, and improved stock-out prevention by 78% across all locations.</p>
+          <a href="#" class="card-link">Read Full Case Study →</a>
+        </article>
+      </div>
+    </div>
+
+    <div class="resource-category">
+      <div class="category-header">
+        <h2>Implementation Insights</h2>
+        <p>Key learnings and best practices from real deployments</p>
+      </div>
+      <div class="resource-items">
+        <article class="resource-card insight-card">
+          <span class="card-meta">Implementation Guide</span>
+          <h3>Building the Business Case for ML</h3>
+          <p>Framework for calculating ROI, identifying quick wins, and securing stakeholder buy-in for ML projects. Includes templates, calculators, and real examples from successful deployments.</p>
+          <a href="#" class="card-link">Read Guide →</a>
+        </article>
+
+        <article class="resource-card insight-card">
+          <span class="card-meta">Best Practices</span>
+          <h3>Data Preparation for Enterprise ML</h3>
+          <p>Practical guide to data quality, governance, and engineering for production ML systems. Learn from challenges faced by 50+ companies and proven solutions that work at scale.</p>
+          <a href="#" class="card-link">Read Best Practices →</a>
+        </article>
+
+        <article class="resource-card insight-card">
+          <span class="card-meta">Technical Deep Dive</span>
+          <h3>Feature Engineering in Practice</h3>
+          <p>Comprehensive guide to designing features that drive business results. Includes architecture patterns, automation strategies, and optimization techniques used by leading Nebula Labs customers.</p>
+          <a href="#" class="card-link">Explore Deep Dive →</a>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <section class="resources-cta">
+    <div class="cta-content">
+      <h2>Ready to Transform Your Business?</h2>
+      <p>Explore how Nebula Labs can help your organization achieve similar results with AI-powered solutions tailored to your industry.</p>
+      <a href="/nebula-labs/get-started" class="cta-button">Start Your Journey</a>
+    </div>
+  </section>
+</div><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Nebula Labs</h4>
+      <p>Democratizing advanced machine learning for mid-market companies.</p>
+      <div class="social-links">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="/nebula-labs/platform">Platform</a></li>
+        <li><a href="/nebula-labs/pricing">Pricing</a></li>
+        <li><a href="/nebula-labs/solutions">Solutions</a></li>
+        <li><a href="https://docs.nebulalabs.ai">Documentation</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/nebula-labs/about">About</a></li>
+        <li><a href="/nebula-labs/resources">Resources</a></li>
+        <li><a href="/nebula-labs/contact">Contact</a></li>
+        <li><a href="https://discord.gg/nebula-labs">Developer Community</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/nebula-labs/privacy">Privacy Policy</a></li>
+        <li><a href="/nebula-labs/terms">Terms of Service</a></li>
+        <li><a href="/nebula-labs/security">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Nebula Labs. All rights reserved.</p>
+  </div>
+</footer></body></html>
