@@ -1,0 +1,997 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Contact Nebula Labs</title><style>/* Global CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #0f172a;
+  background: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER STYLES */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-decoration: none;
+  background: linear-gradient(135deg, #0f172a 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #0f172a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* NAVIGATION STYLES */
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.nav-cta {
+  background: #6366f1 !important;
+  color: white !important;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: #4f46e5 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  text-decoration: none;
+}
+
+/* FOOTER STYLES */
+.site-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 4rem 2rem 2rem;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .site-nav.active {
+    max-height: 500px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+/* Contact Nebula Labs - Page CSS */
+.contact-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.contact-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.contact-hero-content p {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-options {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  border-color: #6366f1;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+  transform: translateY(-4px);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #0f172a;
+}
+
+.contact-card p {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.contact-link {
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.contact-form-section {
+  padding: 4rem 2rem;
+  background: #f8fafc;
+}
+
+.form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-wrapper h2 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: #0f172a;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: #0f172a;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: #6366f1;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  text-decoration: none;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.contact-info {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.info-block {
+  padding: 1.5rem;
+  border-left: 4px solid #6366f1;
+}
+
+.info-block h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.info-block p {
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.info-block a {
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.info-block a:hover {
+  text-decoration: underline;
+}
+
+.info-meta {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+
+.cta-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+
+.cta-content .btn {
+  margin-bottom: 1.5rem;
+}
+
+.cta-secondary {
+  font-size: 0.95rem;
+}
+
+.cta-secondary a {
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.cta-secondary a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .contact-hero-content p {
+    font-size: 1rem;
+  }
+
+  .contact-hero {
+    padding: 3rem 1rem;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form-section,
+  .contact-info,
+  .cta-section {
+    padding: 2rem 1rem;
+  }
+}.contact-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.contact-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.contact-hero-content p {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-options {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  border-color: #6366f1;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+  transform: translateY(-4px);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #0f172a;
+}
+
+.contact-card p {
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.contact-link {
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+.contact-form-section {
+  padding: 4rem 2rem;
+  background: #f8fafc;
+}
+
+.form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-wrapper h2 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: #0f172a;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: #0f172a;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: #6366f1;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  text-decoration: none;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.contact-info {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.info-block {
+  padding: 1.5rem;
+  border-left: 4px solid #6366f1;
+}
+
+.info-block h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.info-block p {
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.info-block a {
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.info-block a:hover {
+  text-decoration: underline;
+}
+
+.info-meta {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+
+.cta-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+
+.cta-content .btn {
+  margin-bottom: 1.5rem;
+}
+
+.cta-secondary {
+  font-size: 0.95rem;
+}
+
+.cta-secondary a {
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+.cta-secondary a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .contact-hero-content p {
+    font-size: 1rem;
+  }
+
+  .contact-hero {
+    padding: 3rem 1rem;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .cta-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form-section,
+  .contact-info,
+  .cta-section {
+    padding: 2rem 1rem;
+  }
+}</style></head><body><header class="site-header">
+  <div class="header-container">
+    <a href="/nebula-labs/" class="logo">Nebula Labs</a>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header><nav class="site-nav">
+  <ul class="nav-menu">
+    <li><a href="/nebula-labs/solutions">Solutions</a></li>
+    <li><a href="/nebula-labs/platform">Platform</a></li>
+    <li><a href="/nebula-labs/pricing">Pricing</a></li>
+    <li><a href="/nebula-labs/resources">Resources</a></li>
+    <li><a href="/nebula-labs/about">About</a></li>
+    <li><a href="/nebula-labs/contact">Contact</a></li>
+    <li><a href="/nebula-labs/get-started" class="nav-cta">Get Started</a></li>
+  </ul>
+</nav>
+<script>
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  toggle?.addEventListener('click', () => {
+    nav?.classList.toggle('active');
+    toggle.classList.toggle('active');
+  });
+</script><section class="contact-hero">
+  <div class="contact-hero-content">
+    <h1>Get in Touch</h1>
+    <p>Have questions? We'd love to hear from you. Choose the option that best fits your needs.</p>
+  </div>
+</section>
+
+<section class="contact-options">
+  <div class="container">
+    <div class="options-grid">
+      <div class="contact-card">
+        <div class="card-icon">💬</div>
+        <h3>General Inquiry</h3>
+        <p>Questions about Nebula Labs or our platform?</p>
+        <a href="mailto:hello@nebulalabs.ai" class="contact-link">hello@nebulalabs.ai</a>
+      </div>
+      <div class="contact-card">
+        <div class="card-icon">🚀</div>
+        <h3>Sales & Enterprise</h3>
+        <p>Ready to explore Nebula for your organization?</p>
+        <button class="btn btn-primary" onclick="openContactForm('sales')">Contact Sales</button>
+      </div>
+      <div class="contact-card">
+        <div class="card-icon">🛠️</div>
+        <h3>Technical Support</h3>
+        <p>Need help with implementation or troubleshooting?</p>
+        <a href="mailto:support@nebulalabs.ai" class="contact-link">support@nebulalabs.ai</a>
+      </div>
+      <div class="contact-card">
+        <div class="card-icon">🤝</div>
+        <h3>Partnerships</h3>
+        <p>Interested in partnering with Nebula Labs?</p>
+        <button class="btn btn-primary" onclick="openContactForm('partnerships')">Learn More</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-form-section">
+  <div class="container">
+    <div class="form-wrapper">
+      <h2>Send us a Message</h2>
+      <form id="contactForm" class="contact-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div class="form-group">
+          <label for="inquiry-type">Inquiry Type *</label>
+          <select id="inquiry-type" name="inquiry-type" required>
+            <option value="">Select an option...</option>
+            <option value="sales">Sales Inquiry</option>
+            <option value="support">Technical Support</option>
+            <option value="partnership">Partnership Opportunity</option>
+            <option value="general">General Question</option>
+            <option value="feedback">Feedback</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="contact-info">
+  <div class="container">
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>Phone</h3>
+        <p><a href="tel:+14155550123">+1 (415) 555-0123</a></p>
+        <p class="info-meta">Mon-Fri, 9am-6pm PST</p>
+      </div>
+      <div class="info-block">
+        <h3>Address</h3>
+        <p>2140 Market Street<br>Suite 400<br>San Francisco, CA 94114</p>
+      </div>
+      <div class="info-block">
+        <h3>Response Time</h3>
+        <p>We typically respond within 24 hours</p>
+        <p class="info-meta">For urgent support, email support@nebulalabs.ai</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Get Started?</h2>
+      <p>Experience Nebula Labs with a 14-day free trial. No credit card required.</p>
+      <a href="/nebula-labs/get-started" class="btn btn-primary btn-large">Start Free Trial</a>
+      <p class="cta-secondary">Or <a href="#" onclick="openDemo()">book a demo</a> with our team</p>
+    </div>
+  </div>
+</section>
+
+<script>
+function openContactForm(type) {
+  const form = document.getElementById('contactForm');
+  const inquiryType = document.getElementById('inquiry-type');
+  inquiryType.value = type;
+  form.scrollIntoView({ behavior: 'smooth' });
+}
+
+function openDemo() {
+  window.location.href = 'https://calendly.com/nebula-labs/demo';
+}
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const formData = new FormData(form);
+  
+  // Simple client-side validation
+  const name = formData.get('name');
+  const email = formData.get('email');
+  const message = formData.get('message');
+  
+  if (name && email && message) {
+    // In production, this would send to a backend service
+    console.log('Form submitted:', Object.fromEntries(formData));
+    alert('Thank you for your message! We\'ll get back to you shortly.');
+    form.reset();
+  }
+}
+</script><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Nebula Labs</h4>
+      <p>Democratizing advanced machine learning for mid-market companies.</p>
+      <div class="social-links">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="/nebula-labs/platform">Platform</a></li>
+        <li><a href="/nebula-labs/pricing">Pricing</a></li>
+        <li><a href="/nebula-labs/solutions">Solutions</a></li>
+        <li><a href="https://docs.nebulalabs.ai">Documentation</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/nebula-labs/about">About</a></li>
+        <li><a href="/nebula-labs/resources">Resources</a></li>
+        <li><a href="/nebula-labs/contact">Contact</a></li>
+        <li><a href="https://discord.gg/nebula-labs">Developer Community</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/nebula-labs/privacy">Privacy Policy</a></li>
+        <li><a href="/nebula-labs/terms">Terms of Service</a></li>
+        <li><a href="/nebula-labs/security">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Nebula Labs. All rights reserved.</p>
+  </div>
+</footer></body></html>
