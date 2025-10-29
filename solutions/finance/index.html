@@ -1,0 +1,636 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>AI Solutions for Finance - Nebula Labs</title><style>/* Global CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #0f172a;
+  background: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER STYLES */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-decoration: none;
+  background: linear-gradient(135deg, #0f172a 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #0f172a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* NAVIGATION STYLES */
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.nav-cta {
+  background: #6366f1 !important;
+  color: white !important;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: #4f46e5 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  text-decoration: none;
+}
+
+/* FOOTER STYLES */
+.site-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 4rem 2rem 2rem;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .site-nav.active {
+    max-height: 500px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+/* Solutions - Nebula Labs - Page CSS */
+.solutions-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* HERO SECTION */
+.solutions-hero {
+  padding: 4rem 0 2rem;
+  text-align: center;
+}
+
+.hero-container h1 {
+  font-size: 2.75rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #475569;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+/* SOLUTIONS GRID */
+.solutions-grid {
+  padding: 2rem 0 4rem;
+}
+
+.solutions-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.solution-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.solution-card:hover {
+  border-color: #6366f1;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.12);
+  transform: translateY(-4px);
+}
+
+.solution-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.solution-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: #0f172a;
+}
+
+.solution-card p {
+  color: #475569;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  line-height: 1.6;
+}
+
+.solution-link {
+  color: #6366f1;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.solution-link:hover {
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #4f46e5;
+}
+
+/* BENEFITS SECTION */
+.solutions-benefits {
+  background: #f8fafc;
+  padding: 4rem 0;
+  margin: 2rem 0;
+  border-radius: 12px;
+}
+
+.benefits-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.solutions-benefits h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #0f172a;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-item {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.benefit-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #0f172a;
+}
+
+.benefit-item p {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* CTA SECTION */
+.solutions-cta {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.cta-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.cta-container > p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #cbd5e1;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  margin: 0 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-button {
+  background: #6366f1;
+  color: white;
+}
+
+.cta-button:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+  text-decoration: none;
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+  background: white;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .solutions-main {
+    padding: 0 1rem;
+  }
+
+  .solutions-hero {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .hero-container h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .solutions-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .solution-card {
+    padding: 1.5rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutions-cta {
+    padding: 2.5rem 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .solutions-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    display: block;
+    margin: 0.75rem 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .solution-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .solutions-benefits h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* AI Solutions for Finance - Nebula Labs - Page CSS */
+</style></head><body><header class="site-header">
+  <div class="header-container">
+    <a href="/nebula-labs/" class="logo">Nebula Labs</a>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header><nav class="site-nav">
+  <ul class="nav-menu">
+    <li><a href="/nebula-labs/solutions">Solutions</a></li>
+    <li><a href="/nebula-labs/platform">Platform</a></li>
+    <li><a href="/nebula-labs/pricing">Pricing</a></li>
+    <li><a href="/nebula-labs/resources">Resources</a></li>
+    <li><a href="/nebula-labs/about">About</a></li>
+    <li><a href="/nebula-labs/contact">Contact</a></li>
+    <li><a href="/nebula-labs/get-started" class="nav-cta">Get Started</a></li>
+  </ul>
+</nav>
+<script>
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  toggle?.addEventListener('click', () => {
+    nav?.classList.toggle('active');
+    toggle.classList.toggle('active');
+  });
+</script><div class="solutions-main">
+  <section class="solutions-hero">
+    <div class="hero-container">
+      <h1>AI Solutions for Financial Services</h1>
+      <p class="hero-subtitle">Fraud detection, risk assessment, and predictive analytics purpose-built for mid-market financial institutions. Reduce risk, detect threats faster, and make better lending decisions with machine learning.</p>
+    </div>
+  </section>
+
+  <section class="solutions-grid">
+    <div class="solutions-container">
+      <div class="solution-card">
+        <div class="solution-icon">🔍</div>
+        <h3>Fraud Detection</h3>
+        <p>Real-time transaction monitoring that identifies suspicious patterns before they become losses. Our models adapt to emerging fraud tactics with minimal false positives, protecting your customers and your bottom line.</p>
+        <a href="#" class="solution-link">Learn more →</a>
+      </div>
+      <div class="solution-card">
+        <div class="solution-icon">📊</div>
+        <h3>Risk Assessment</h3>
+        <p>Comprehensive credit and operational risk evaluation that goes beyond traditional scoring. Combine alternative data sources with behavioral signals to make faster, more accurate lending decisions at scale.</p>
+        <a href="#" class="solution-link">Learn more →</a>
+      </div>
+      <div class="solution-card">
+        <div class="solution-icon">🔮</div>
+        <h3>Predictive Analytics</h3>
+        <p>Forecast market trends, customer churn, and portfolio performance with machine learning models trained on your institution's data. Stay ahead of market movements and optimize your strategic decisions.</p>
+        <a href="#" class="solution-link">Learn more →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="solutions-benefits">
+    <div class="benefits-container">
+      <h2>Why Financial Leaders Choose Nebula</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <h4>Purpose-Built for Finance</h4>
+          <p>Our models understand the unique compliance, regulatory, and operational challenges of financial services. We don't force generic AI into your workflows—we build solutions that fit your reality.</p>
+        </div>
+        <div class="benefit-item">
+          <h4>Explainable AI</h4>
+          <p>Every prediction comes with clear reasoning. Understand why your model flagged a transaction or denied a loan application. Maintain compliance and customer trust with transparent machine learning.</p>
+        </div>
+        <div class="benefit-item">
+          <h4>Reduce False Positives</h4>
+          <p>Tired of legitimate transactions blocked? Our advanced models dramatically reduce false alarms, keeping customer friction low while maintaining robust fraud protection.</p>
+        </div>
+        <div class="benefit-item">
+          <h4>Fast Deployment</h4>
+          <p>From pilot to production in weeks, not months. Our platform integrates with your existing systems and data pipelines, so you see ROI faster than traditional ML projects.</p>
+        </div>
+        <div class="benefit-item">
+          <h4>Regulatory Confidence</h4>
+          <p>Built with compliance top-of-mind. Our solutions work within your regulatory framework, with audit trails, explainability, and governance features regulators expect.</p>
+        </div>
+        <div class="benefit-item">
+          <h4>Continuous Improvement</h4>
+          <p>Models that stay accurate over time. We monitor performance drift and automatically retrain models as market conditions and fraud patterns evolve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="solutions-cta">
+    <div class="cta-container">
+      <h2>Ready to Transform Your Financial Operations?</h2>
+      <p>See how Nebula Labs helps mid-market financial institutions reduce fraud, improve risk decisions, and grow confidently with AI.</p>
+      <div>
+        <a href="/nebula-labs/get-started" class="cta-button">Start Free Trial</a>
+        <a href="/nebula-labs/contact" class="cta-button secondary">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+</div><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Nebula Labs</h4>
+      <p>Democratizing advanced machine learning for mid-market companies.</p>
+      <div class="social-links">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="/nebula-labs/platform">Platform</a></li>
+        <li><a href="/nebula-labs/pricing">Pricing</a></li>
+        <li><a href="/nebula-labs/solutions">Solutions</a></li>
+        <li><a href="https://docs.nebulalabs.ai">Documentation</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/nebula-labs/about">About</a></li>
+        <li><a href="/nebula-labs/resources">Resources</a></li>
+        <li><a href="/nebula-labs/contact">Contact</a></li>
+        <li><a href="https://discord.gg/nebula-labs">Developer Community</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/nebula-labs/privacy">Privacy Policy</a></li>
+        <li><a href="/nebula-labs/terms">Terms of Service</a></li>
+        <li><a href="/nebula-labs/security">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Nebula Labs. All rights reserved.</p>
+  </div>
+</footer></body></html>
