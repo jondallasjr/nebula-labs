@@ -1,0 +1,679 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Blog - Nebula Labs</title><style>/* Global CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #0f172a;
+  background: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER STYLES */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-decoration: none;
+  background: linear-gradient(135deg, #0f172a 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #0f172a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* NAVIGATION STYLES */
+.site-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-menu a {
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.nav-cta {
+  background: #6366f1 !important;
+  color: white !important;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: #4f46e5 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  text-decoration: none;
+}
+
+/* FOOTER STYLES */
+.site-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 4rem 2rem 2rem;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .site-nav.active {
+    max-height: 500px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+/* Resources - Nebula Labs - Page CSS */
+.resources-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #6366f1 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.resources-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.resources-hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+.resources-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+.resources-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.resource-category {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.category-header {
+  border-bottom: 2px solid #6366f1;
+  padding-bottom: 1.5rem;
+}
+
+.category-header h2 {
+  font-size: 1.75rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.category-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.resource-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.resource-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.resource-card:hover {
+  border-color: #6366f1;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.12);
+  transform: translateY(-4px);
+}
+
+.card-meta {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #4f46e5;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+}
+
+.resource-card h3 {
+  font-size: 1.15rem;
+  color: #0f172a;
+  line-height: 1.4;
+}
+
+.resource-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.card-link {
+  color: #6366f1;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  width: fit-content;
+}
+
+.card-link:hover {
+  color: #4f46e5;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.resources-cta {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 2rem;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.resources-cta h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.resources-cta p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #e0e7ff;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #6366f1;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .resources-hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .resources-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .resources-hero p {
+    font-size: 1rem;
+  }
+
+  .resources-container {
+    padding: 0 1rem 2rem;
+  }
+
+  .resources-grid {
+    gap: 2.5rem;
+  }
+
+  .category-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .resource-items {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-cta {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .resources-cta h2 {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* Blog - Nebula Labs - Page CSS */
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-date {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .blog-card {
+    gap: 0.5rem;
+  }
+}
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-date {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .blog-card {
+    gap: 0.5rem;
+  }
+}
+</style></head><body><header class="site-header">
+  <div class="header-container">
+    <a href="/nebula-labs/" class="logo">Nebula Labs</a>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header><nav class="site-nav">
+  <ul class="nav-menu">
+    <li><a href="/nebula-labs/solutions">Solutions</a></li>
+    <li><a href="/nebula-labs/platform">Platform</a></li>
+    <li><a href="/nebula-labs/pricing">Pricing</a></li>
+    <li><a href="/nebula-labs/resources">Resources</a></li>
+    <li><a href="/nebula-labs/about">About</a></li>
+    <li><a href="/nebula-labs/contact">Contact</a></li>
+    <li><a href="/nebula-labs/get-started" class="nav-cta">Get Started</a></li>
+  </ul>
+</nav>
+<script>
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const nav = document.querySelector('.site-nav');
+  toggle?.addEventListener('click', () => {
+    nav?.classList.toggle('active');
+    toggle.classList.toggle('active');
+  });
+</script><section class="resources-hero">
+  <div class="hero-content">
+    <h1>Blog</h1>
+    <p>Thought leadership and technical insights on AI/ML trends, best practices, and implementation strategies for mid-market companies.</p>
+  </div>
+</section>
+
+<div class="resources-container">
+  <div class="resources-grid">
+    <div class="resource-category">
+      <div class="category-header">
+        <h2>Latest Articles</h2>
+        <p>Deep dives into machine learning implementation, industry trends, and technical best practices.</p>
+      </div>
+      <div class="resource-items">
+        <article class="resource-card blog-card">
+          <span class="card-meta">Article</span>
+          <span class="card-date">Dec 15, 2024</span>
+          <h3>Scaling ML Models in Production: A Practical Guide</h3>
+          <p>Learn how to architect scalable machine learning systems that handle millions of predictions per second. We cover containerization, load balancing, and monitoring strategies that have helped our customers reduce latency by 60%.</p>
+          <a href="#" class="card-link">Read Article →</a>
+        </article>
+        <article class="resource-card blog-card">
+          <span class="card-meta">Article</span>
+          <span class="card-date">Dec 8, 2024</span>
+          <h3>AI Ethics and Responsible Machine Learning</h3>
+          <p>Implementing ethical AI isn't just a compliance checkbox—it's critical for building customer trust. Explore bias detection, fairness metrics, and governance frameworks that ensure your ML systems serve all users equitably.</p>
+          <a href="#" class="card-link">Read Article →</a>
+        </article>
+        <article class="resource-card blog-card">
+          <span class="card-meta">Article</span>
+          <span class="card-date">Dec 1, 2024</span>
+          <h3>Five ML Mistakes We See (And How to Avoid Them)</h3>
+          <p>Data leakage, incorrect train/test splits, and feature engineering gone wrong—learn from the most common pitfalls we encounter with mid-market teams. Includes real-world examples and preventative strategies.</p>
+          <a href="#" class="card-link">Read Article →</a>
+        </article>
+        <article class="resource-card blog-card">
+          <span class="card-meta">Article</span>
+          <span class="card-date">Nov 24, 2024</span>
+          <h3>Evaluating ML Model Performance: Beyond Accuracy</h3>
+          <p>Accuracy alone doesn't tell the whole story. Discover precision, recall, F1 scores, and ROC curves—and when to use each metric. Includes practical code examples for evaluating classification and regression models.</p>
+          <a href="#" class="card-link">Read Article →</a>
+        </article>
+        <article class="resource-card blog-card">
+          <span class="card-meta">Article</span>
+          <span class="card-date">Nov 17, 2024</span>
+          <h3>Feature Engineering: The Secret to Model Performance</h3>
+          <p>Raw data rarely produces winning models. Learn systematic approaches to feature selection, transformation, and creation. We share techniques that improved model accuracy by 25% across our customer base.</p>
+          <a href="#" class="card-link">Read Article →</a>
+        </article>
+        <article class="resource-card blog-card">
+          <span class="card-meta">Article</span>
+          <span class="card-date">Nov 10, 2024</span>
+          <h3>Getting Started with Transfer Learning</h3>
+          <p>You don't need massive datasets to build powerful models. Transfer learning lets you leverage pre-trained models and fine-tune them for your specific use case. Perfect for companies with limited labeled data.</p>
+          <a href="#" class="card-link">Read Article →</a>
+        </article>
+      </div>
+    </div>
+
+    <div class="resource-category">
+      <div class="category-header">
+        <h2>Technical Deep Dives</h2>
+        <p>For engineers and data scientists ready to get hands-on with code and algorithms.</p>
+      </div>
+      <div class="resource-items">
+        <article class="resource-card blog-card">
+          <span class="card-meta">Technical</span>
+          <span class="card-date">Dec 3, 2024</span>
+          <h3>Building Custom Loss Functions for Your Domain</h3>
+          <p>Standard loss functions don't always capture your business objectives. Learn to design custom loss functions that directly optimize for your metrics. Includes PyTorch and TensorFlow implementations.</p>
+          <a href="#" class="card-link">Read Article →</a>
+        </article>
+        <article class="resource-card blog-card">
+          <span class="card-meta">Technical</span>
+          <span class="card-date">Nov 26, 2024</span>
+          <h3>Hyperparameter Tuning at Scale with Ray Tune</h3>
+          <p>Random search is yesterday's news. Discover advanced hyperparameter optimization techniques including Bayesian optimization and population-based training. Distributed tuning strategies for faster convergence.</p>
+          <a href="#" class="card-link">Read Article →</a>
+        </article>
+        <article class="resource-card blog-card">
+          <span class="card-meta">Technical</span>
+          <span class="card-date">Nov 19, 2024</span>
+          <h3>Time Series Forecasting with Transformers</h3>
+          <p>Transformer architectures aren't just for NLP anymore. See how attention mechanisms revolutionize time series prediction. Complete tutorial with real financial forecasting examples.</p>
+          <a href="#" class="card-link">Read Article →</a>
+        </article>
+      </div>
+    </div>
+
+    <div class="resource-category">
+      <div class="category-header">
+        <h2>Industry Insights</h2>
+        <p>Trends, market analysis, and perspectives from the Nebula Labs team.</p>
+      </div>
+      <div class="resource-items">
+        <article class="resource-card blog-card">
+          <span class="card-meta">Insight</span>
+          <span class="card-date">Dec 10, 2024</span>
+          <h3>The MLOps Revolution: Why It Matters for Mid-Market</h3>
+          <p>MLOps isn't just DevOps for ML—it's a complete mindset shift. Discover why companies investing in MLOps infrastructure today are outpacing competitors. Case studies from three industries.</p>
+          <a href="#" class="card-link">Read Article →</a>
+        </article>
+        <article class="resource-card blog-card">
+          <span class="card-meta">Insight</span>
+          <span class="card-date">Nov 28, 2024</span>
+          <h3>2025 ML Predictions: What's Coming Next</h3>
+          <p>Our team of engineers and data scientists share bold predictions for the ML landscape. From foundation models to edge computing, here's what we're watching closely in the year ahead.</p>
+          <a href="#" class="card-link">Read Article →</a>
+        </article>
+        <article class="resource-card blog-card">
+          <span class="card-meta">Insight</span>
+          <span class="card-date">Nov 12, 2024</span>
+          <h3>Why Your First ML Project Should Be Small</h3>
+          <p>Ambition is great, but starting with targeted ML pilots builds organizational capability and proves ROI. Learn why our most successful customers start narrow and scale gradually.</p>
+          <a href="#" class="card-link">Read Article →</a>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <section class="resources-cta">
+    <div class="cta-content">
+      <h2>Ready to Put ML to Work?</h2>
+      <p>Explore our platform and see how Nebula Labs can help your team build, deploy, and manage machine learning at scale.</p>
+      <a href="/nebula-labs/get-started" class="cta-button">Start Free Trial</a>
+    </div>
+  </section>
+</div><footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Nebula Labs</h4>
+      <p>Democratizing advanced machine learning for mid-market companies.</p>
+      <div class="social-links">
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-section">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="/nebula-labs/platform">Platform</a></li>
+        <li><a href="/nebula-labs/pricing">Pricing</a></li>
+        <li><a href="/nebula-labs/solutions">Solutions</a></li>
+        <li><a href="https://docs.nebulalabs.ai">Documentation</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/nebula-labs/about">About</a></li>
+        <li><a href="/nebula-labs/resources">Resources</a></li>
+        <li><a href="/nebula-labs/contact">Contact</a></li>
+        <li><a href="https://discord.gg/nebula-labs">Developer Community</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/nebula-labs/privacy">Privacy Policy</a></li>
+        <li><a href="/nebula-labs/terms">Terms of Service</a></li>
+        <li><a href="/nebula-labs/security">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Nebula Labs. All rights reserved.</p>
+  </div>
+</footer></body></html>
